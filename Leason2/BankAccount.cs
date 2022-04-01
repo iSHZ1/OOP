@@ -8,7 +8,9 @@ namespace Leason2
 {
     public class BankAccount
     {
-        private static int AccountNumber { get; set; } = 40800;
+        private static int GenerateCode { get; set; } = 40800;
+
+        private int AccountNumber { get; set; }
 
         private decimal Balance { get; set; }
 
@@ -21,17 +23,17 @@ namespace Leason2
 
         public BankAccount(int balance, int typeAccountNumber)
         {
-            CreateId();
+            AccountNumber = CreateId();
             Balance = balance;
             TypeAccountNumber = (BankType)typeAccountNumber;
         }
 
-        public void CreateId()
+        public int CreateId()
         {
-            AccountNumber++;
+            return GenerateCode++;
         }
 
-        public void ReplenishmentBalance(decimal money) 
+        public void ReplenishmentBalance(decimal money)
         {
             Balance += money;
         }

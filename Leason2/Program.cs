@@ -1,7 +1,7 @@
 ﻿using System;
 
-namespace Leason2 
-{ 
+namespace Leason2
+{
     class Program
     {
         public static void Main()
@@ -31,7 +31,7 @@ namespace Leason2
                 Console.WriteLine("Выберите тип счета:");
                 Console.WriteLine("1 - Счет для юридического лица");
                 Console.WriteLine("2- Счет физического лица");
-                Console.WriteLine("3 - Вклад");
+                Console.WriteLine("3 - Вклад(Снимать деньги нельзя)");
                 Console.WriteLine("4 - Накопительный счет");
                 b = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
@@ -106,5 +106,4 @@ namespace Leason2
             }
         }
     }
-
 }
